@@ -1,0 +1,73 @@
+﻿@page
+@model TestApp1.Pages.Teams.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>TeamListing</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.TeamListing.Rank)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TeamListing.Rank)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.TeamListing.Team)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TeamListing.Team)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.TeamListing.Mascot)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TeamListing.Mascot)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.TeamListing.DateOfLastWin)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TeamListing.DateOfLastWin)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.TeamListing.WinningPercentage)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TeamListing.WinningPercentage)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.TeamListing.Wins)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TeamListing.Wins)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.TeamListing.Losses)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TeamListing.Losses)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.TeamListing.Ties)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TeamListing.Ties)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.TeamListing.Games)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TeamListing.Games)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.TeamListing.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

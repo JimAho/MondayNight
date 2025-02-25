@@ -1,0 +1,82 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "The Story Behind the ";
+}
+
+<div class="text-center">
+    <h1>The Ntara Team Search Project</h1>
+    <div>
+        <a asp-page="Teams/Index">See the Page in Action</a>
+    </div>
+
+        <p>
+            Welcome to the Story Behind the Code
+
+        </p>
+    <h2>Initial Project Definition</h2>
+        <p>After the staff at Ntara provided the opportunity to interview in person twice to help determine if I might be a good fit for the role, 
+            I was assigned the following sample project. </p>
+            
+    <p>1. Create a single web page in asp.net C#<br />with a textbox and a button that, when clicked, <br />searches a
+    given dataset and returns the entire record of results on screen</p>
+    <p>
+        2. Include a drop-down that defaults to all columns but can be selected to search only one column
+    </p>
+    <p>
+        3. Provide error checking where appropriate
+    </p>
+    <p>
+        4. Please use a technology framework like Angular, React, or Vue to help showcase how you’ll
+        interact with the frontend.
+    </p>
+    
+    <h2>Initial Skillset Matchup</h2>
+    <p>My experience includes coding in multiple languages, but as of the project start date my C# skills were a bit rusty. I have also never singlehandedly connected a database to a Razor page. Technologies such as Angular, React and Vue are new.</p>
+    <p>Given that fact, part of my planning had to include time researching, learning and brushing up on multiple items.</p>
+    
+    <h2>Planning Timeline</h2>
+    <p><strong>Tuesday, February 18<br>Received the Project</strong><br />Received email instructions for the project. Opened them, sent a response confirming that I had received the email, and looked over the project as a brief preview. I let Ntara know that I was planning to go more in depth on the project over the weekend.</p>
+    <p><strong>Tuesday, Febrary 18 through Friday, February 21<br />Focus on Current Job</strong><br />During the week, I continued to focus on getting an inRiver PIM ready for implementation at my current full time job.</p>
+    <p><strong>Saturday, February 22<br />6:00 am - 6:00 pm<br>Renew Required Skillsets</strong><br />I set aside one day to catch up on the technology required. Researched Razor and database implementation. Reviewed C# syntax. Built a couple of sample database projects using Visual Studio.</p>
+
+    <p><strong>Sunday, February 23<br />6:00 am - 6:00 pm<br>Focus on the Ntara Project</strong><br />Wrote and implemented code specifically for the project.</p>
+
+    <h2>Skillset Acquisition</h2>
+    <p>On Saturday, I focused on aspects of Visual Studio and C# that would directly relate to the project.</p>
+
+    <p>After browsing a variety of articles, I found this tutorial to be helpful with the task at hand. During the explanation of each step later, I have added links to other pages that I found helpful.</p>
+
+    <p><a href="https://learn.microsoft.com/en-us/aspnet/core/data/ef-rp/intro?view=aspnetcore-9.0&tabs=visual-studio" target="_blank">Razor Pages with Entity Framework Core in ASP.NET Core - Tutorial</a></p>
+
+    <p>This tutorial explains how to create a Razor page and connect it with a database. I created three practice pages using these instructions. It even explains how to introduce a search function, which is called out in the project definition.</p>
+    
+    <h1>Ntara Project Logistics</h1>
+    <p>Once I began working specifically on the Ntara project on Sunday, the first thing I did was finalize and write down the mapping for each general task that I imagined would be required to complete the project. Here is a general list followed by specific details about implementation.</p>
+    <p>1. Set up the Razor Project</p>
+    <p>2. Migrate the data into the database</p>
+    <p>3. Build a page to display the data as a table</p>
+    <p>4. Introduce search capability into the page</p>
+    <p>5. Modify the search to change behavior based on a dropdown</p>
+    <p><strong>Setting up the Razor Project</strong></p>
+    <p>For this task, I was able to begin by adding the Scaffolded Item entitled <i>Razor Components using Empty Framework (CRUD)</i> to the page. The automatically generated pages were then available for modification for the project.</p>
+    <p>The methodology I used is <a href="https://learn.microsoft.com/en-us/aspnet/core/blazor/tutorials/movie-database-app/part-2?view=aspnetcore-9.0&pivots=vs" target="_blank">Documented Here</a>.</p>
+    <p><strong>Moving the CSV Data Into the Database</strong></p>
+    <p>Once I had the setup, I modified the code in <a href="https://learn.microsoft.com/en-us/aspnet/core/blazor/tutorials/movie-database-app/part-4?view=aspnetcore-9.0&pivots=vs" target="_blank"> this example</a> to seed the database. Since the original csv had a lot of rows, I wrote the code that I introduced to the new Teams class by using Excel. Specifically, I concatenated data fields from the original csv with the appropriate repeated code. I was able to then copy these concatenated values directly into the code. While it worked, this section of code remains formatted as pasted with limited line breaks. I left it that way because I found it easier in this case to scan differences in the rows without multiple lines to scroll through. </p>
+    <p><strong>Building a Page to Display the Data as a Table</strong></p>
+    <p>At this point, I already had pages available that were generated by the <i>Razor Components using Empty Framework (CRUD)</i> Scaffolding. I modified the index.cshtml file in the Teams directory with a layout that would work with the project data.</p>
+    <p><strong>Introduce Search Capability to the Page</strong></p>
+    <p>The methodology I used for accomplishing this is <a href="https://learn.microsoft.com/en-us/aspnet/core/blazor/tutorials/movie-database-app/part-6?view=aspnetcore-9.0&pivots=vs" target="_blank">documented here</a>.</p>
+    <p><strong>Modifying Search to Respond to Dropdown</strong></p>
+    <p>Once I was at this step, I thought with a few more modifications I was home free. Not so fast. This functionality was actually one of the most challenging of the entire project. It may have been because I was getting tired at this point, but it took some thought (and some exception errors) to get it set up. I ended up creating an <i>if, else if, else Statment</i> that worked.</p>
+    
+    <h1>Some Things I Learned (so far)</h1>
+    <p>Setting up this project was very interesting to me. It was a challenge and it opened up a lot of questions about how things work. Of course, not having contact with the user that is requesting the page makes developing a solution difficult. I could then ask if the NULL values should be removed from the visible data and whether the columns should be sortable. User feedback on the page would be extremely helpful.</p>
+    <p>On Saturday, the learning curve was more challenging, but I was able to explore more topics and even try some things that weren't directly in the project scope. I took a look at the broader perspective of what can be done, and a few fun ideas even came up. For example, I have a short term plan to create and publish a database of musical bands as a bit of a practice and exploration. The functionality sparked a lot of ideas, but as of the end of day Saturday those were put temporarily on hold. The task at hand was fulfilling the specific requirements of the Ntara Project on Sunday morning.</p>
+    <p>On Sunday, I was more used to the environment. Instead of exploring I focused fully within the parameters of the project. Given the fact that my focus would have to return to work on Monday, my deadline was 6:00 pm Sunday. I expected to face more issues than I did early in the day, but surprisingly things were coming together as expected. As I mentioned earlier, I did begin experiencing issues with the dropdown task in the search requirements, but now can look back and see the solution easier. This leads me to believe that fatigue may have been in play since I had been coding for a while at that point. The good news is that I was able to complete a working version around 4:00 pm on Sunday. I looked things over and made a few updates until 6:00 pm. I then took my notes and translated them into the document that you are reading.</p>
+    <h1>Time Spent Coding</h1>
+    <p>Sunday - 12 hours (6:00 am - 6:00 pm)<br />Saturday - 12 hours of research time that was not necessarily directly related to the solution (6:00 am - 6:00 pm)</p>
+    <div>
+        <a asp-page="Teams/Index">See the Page in Action</a>
+    </div>
+</div>

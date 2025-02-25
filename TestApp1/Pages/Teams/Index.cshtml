@@ -1,0 +1,102 @@
+﻿@page
+@model TestApp1.Pages.Teams.IndexModel
+
+@{
+    ViewData["Title"] = "College Team Wins with Mascots";
+}
+
+<h1>Team Search</h1>
+
+<form>
+ 
+    <p>
+        <select name="dropdownSelector" id="dropdownSelector">
+            <option value="AllColumns" selected>All Columns</option>
+            <option value="Rank">Rank</option>
+            <option value="Team">Team</option>
+            <option value="Mascot">Mascot</option>
+            <option value="DateOfLastWin">Date of Last Win</option>
+            <option value="WinningPercentage">Winning Percentage</option>
+            <option value="Wins">Wins</option>
+            <option value="Losses">Losses</option>
+            <option value="Ties">Ties</option>
+            <option value="Games">Games</option>
+        </select>
+
+        <label><input type="text" asp-for="SearchString" /></label>
+        <input type="submit" value="Search" />
+
+ 
+    </p>
+</form>
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TeamListing[0].Rank)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TeamListing[0].Team)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TeamListing[0].Mascot)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TeamListing[0].DateOfLastWin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TeamListing[0].WinningPercentage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TeamListing[0].Wins)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TeamListing[0].Losses)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TeamListing[0].Ties)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TeamListing[0].Games)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.TeamListing) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rank)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Team)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mascot)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateOfLastWin)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WinningPercentage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Wins)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Losses)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ties)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Games)
+            </td>
+
+        </tr>
+}
+    </tbody>
+</table>
